@@ -1,3 +1,7 @@
+
+<img width="798" height="396" alt="Image" src="https://github.com/user-attachments/assets/12a3f51a-1d1a-467b-b0ea-2c0d38f55b79" />
+<br>
+
 <details>
 <summary>📄 Ver código Arduino</summary>
 
