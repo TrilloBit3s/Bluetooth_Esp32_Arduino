@@ -13,7 +13,6 @@ PARA ARDUINO COM APP UNITY FUNCIONA PERFEITAMENTE
 Dev por "Michael" Trillobit3sGames
 trillobit3s@gmail.com - estuartyy@gmail.com 
 
-Carrinho bluetooth Arduino sem slider
 primeira atualização 05/02/2017
 Ultima atualização 25/04/2026
 
