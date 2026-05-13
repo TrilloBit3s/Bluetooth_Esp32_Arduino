@@ -28,6 +28,8 @@ S = PARADO
 V = BUZINA => v = buzina desligada
 W = LED FRENTE => w = led frente desligado
 U = LED TRÁS => u = led trás   desligado 
+
+Este código pode ser usado com L298N, L239D, DRV8833, TB6612FNG
 */
 
 // 2026.2
