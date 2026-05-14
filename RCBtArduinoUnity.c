@@ -1,25 +1,23 @@
-/*
 // PARA ARDUINO COM APP UNITY FUNCIONA PERFEITAMENTE
-Dev por "Michael" Trillobit3sGames
-trillobit3s@gmail.com - estuartyy@gmail.com 
+// Dev por "Michael" Trillobit3sGames
+// trillobit3s@gmail.com - estuartyy@gmail.com 
 
-Carrinho bluetooth Arduino sem slider
-primeira atualização 05/02/2017
-Ultima atualização 25/04/2026
+// Carrinho bluetooth Arduino sem slider
+// primeira atualização 05/02/2017
+// Ultima atualização 14/05/2026
 
-USE ESTES CARACTERES EM SEU CÓDIGO
+// USE ESTES CARACTERES EM SEU CÓDIGO
 
-F = PARA FRENTE => S = PARADO  
-B = PARA ATRÁS => S = PARADO
-L = PARA ESQUERDA => S = PARADO
-R = PARA DIREITA => S = PARADO
+// F = PARA FRENTE => S = PARADO  
+// B = PARA ATRÁS => S = PARADO
+// L = PARA ESQUERDA => S = PARADO
+// R = PARA DIREITA => S = PARADO
 
-S = PARADO
+// S = PARADO
 
-V = BUZINA => v = buzina desligada
-W = LED FRENTE => w = led frente desligado
-U = LED TRÁS => u = led trás   desligado 
-*/
+// V = BUZINA => v = buzina desligada
+// W = LED FRENTE => w = led frente desligado
+// U = LED TRÁS => u = led trás   desligado 
 
 // 2026.2
 #include <SoftwareSerial.h>
@@ -120,22 +118,60 @@ void loop()
 
 void executarMovimento()
 {
-  analogWrite(ENA, vSpeed);
-  analogWrite(ENB, vSpeed);
-
   switch (currentState)
   {
-    case 'F': frente(); break;
-    case 'B': tras(); break;
-    case 'L': esquerda(); break;
-    case 'R': direita(); break;
+    // FRENTE
+    case 'F':
+      analogWrite(ENA, vSpeed);
+      analogWrite(ENB, vSpeed);
+      frente();
+    break;
 
-    case 'G': frenteEsq(); break;
-    case 'I': frenteDir(); break;
-    case 'H': trasEsq(); break;
-    case 'J': trasDir(); break;
+    // TRÁS
+    case 'B':
+      analogWrite(ENA, vSpeed);
+      analogWrite(ENB, vSpeed);
+      tras();
+    break;
 
-    default: parar(); break;
+    // ESQUERDA
+    case 'L':
+      analogWrite(ENA, vSpeed);
+      analogWrite(ENB, vSpeed);
+      esquerda();
+    break;
+
+    // DIREITA
+    case 'R':
+      analogWrite(ENA, vSpeed);
+      analogWrite(ENB, vSpeed);
+      direita();
+    break;
+
+    // DIAGONAL FRENTE ESQUERDA
+    case 'G':
+      frenteEsq();
+    break;
+
+    // DIAGONAL FRENTE DIREITA
+    case 'I':
+      frenteDir();
+    break;
+
+    // DIAGONAL TRÁS ESQUERDA
+    case 'H':
+      trasEsq();
+    break;
+
+    // DIAGONAL TRÁS DIREITA
+    case 'J':
+      trasDir();
+    break;
+
+    // PARAR
+    default:
+      parar();
+    break;
   }
 }
 
@@ -186,6 +222,10 @@ void trasDir() {
 }
 
 void parar() {
+
+  analogWrite(ENA, 0);
+  analogWrite(ENB, 0);
+
   digitalWrite(motorA1, LOW);
   digitalWrite(motorA2, LOW);
   digitalWrite(motorB1, LOW);
