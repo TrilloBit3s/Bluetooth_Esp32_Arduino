@@ -12,12 +12,10 @@
 // Dev por "Michael" Trillobit3sGames
 // trillobit3s@gmail.com - estuartyy@gmail.com 
 
-// Carrinho bluetooth Arduino sem slider
-// primeira atualização 05/02/2017
+// Primeira atualização 05/02/2017
 // Ultima atualização 14/05/2026
 
 // USE ESTES CARACTERES EM SEU CÓDIGO
-
 // F = PARA FRENTE => S = PARADO  
 // B = PARA ATRÁS => S = PARADO
 // L = PARA ESQUERDA => S = PARADO
@@ -243,13 +241,14 @@ void parar() {
 }
 
 -------------------------------------------------------------------------
+
 /*
 - CÓDIGO PARA USAR NO ESP32_38p COM APP UNITY
 Algoritimo para Esp32 DOIT DEVKI V1
 Dev por "Michael M.SABINO" Trillobit3sGames
 trillobit3s@gmail.com - estuartyy@gmail.com 
 primeira versão bluetooth arduino 05/02/2017
-Ultima atualização bluetooth Esp32 14/05/2026
+Ultima atualização bluetooth Esp32 25/04/2026
 
 USE ESTES CARACTERES EM SEU CÓDIGO
 
@@ -456,7 +455,6 @@ void executarMovimento()
 }
 
 // ================= MOVIMENTOS =================
-
 void frente()
 {
   digitalWrite(MR1, LOW);
